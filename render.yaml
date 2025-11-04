@@ -7,10 +7,5 @@ services:
     plan: free
     autoDeploy: true
     healthCheckPath: /healthz
-
-    # image: must be at the same level as dockerCommand
-    image:
-      repository: docker.n8n.io/n8nio/n8n
-      tag: latest
-
+    image: docker.n8n.io/n8nio/n8n:latest
     dockerCommand: n8n start
