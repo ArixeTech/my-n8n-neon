@@ -5,7 +5,12 @@ services:
     env: docker
     region: oregon
     plan: free
-    dockerCommand: n8n start
-    image: docker.n8n.io/n8nio/n8n:latest
-    healthCheckPath: /healthz
     autoDeploy: true
+    healthCheckPath: /healthz
+
+    # CORRECT: Use block style for image
+    image:
+      repository: docker.n8n.io/n8nio/n8n
+      tag: latest
+
+    dockerCommand: n8n start
