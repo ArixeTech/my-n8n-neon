@@ -2,10 +2,8 @@
 services:
   - type: web
     name: n8n
-    env: image
+    env: docker
     region: oregon
     plan: free
-    autoDeploy: true
     healthCheckPath: /healthz
-    image: docker.n8n.io/n8nio/n8n:latest
-    dockerCommand: n8n start
+    autoDeploy: true
