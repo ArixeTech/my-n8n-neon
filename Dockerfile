@@ -1,3 +1,2 @@
-FROM n8nio/n8n:latest
-EXPOSE 5678
-CMD n8n start
+FROM n8nio/n8n:1.72.1-debian
+CMD ["n8n", "start"]
