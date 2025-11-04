@@ -1,0 +1,11 @@
+# render.yaml
+services:
+  - type: web
+    name: n8n
+    env: docker
+    region: oregon
+    plan: free
+    dockerCommand: n8n start
+    image: docker.n8n.io/n8nio/n8n:latest
+    healthCheckPath: /healthz
+    autoDeploy: true
